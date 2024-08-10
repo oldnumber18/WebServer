@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>学习</title>
+    </head>
+    <style>
+        @media (min-width:1024px) {
+            .body
+            {
+                background:url(https://t.mwm.moe/pc);
+            }
+        }
+        @media (max-width:1024px){
+            .body{
+                background:url(https://t.mwm.moe/mp);
+            }
+        }
+        h2 {
+            border: 3px solid #061f8f;
+            color: #07e019;
+        }
+    </style>
+    <body class="body">
+        <div id="datetime" align="center">
+            <script>
+                setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
+            </script>
+        </div>
+        <div align="center">
+            <h3 class="hitokoto" id="yiyancon"></h3> 
+            <script type="text/javascript" src="https://international.v1.hitokoto.cn?encode=js&amp;charset=utf-8&amp;&amp;c=j&amp;c=k&amp;c=l"></script>
+        </div>
+        <div align="center">
+            <h2>
+                <a href="https://drunkmars.top/" target = "_blank" style="color:black">Dk Bolg</a>
+                <a href="https://www.cnblogs.com/sakura521" target = "_blank" style="color:black">Ctrl Blog</a>
+            </h2>
+        </div>
+    </body>
+</html>
