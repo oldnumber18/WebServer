@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>学习</title>
+        <title>OLD博客</title>
+        <link rel="stylesheet" href="css/common.css">
     </head>
     <style>
         @media (min-width:1024px) {
@@ -16,32 +17,211 @@
                 background:url(https://t.mwm.moe/mp);
             }
         }
-        h2 {
-            border: 3px solid #061f8f;
-            color: #07e019;
+        .blog-edit-container {
+            width: 1000px;
+            height: calc(100% - 50px);
+            margin: 0 auto;
         }
+
+        /* 标题编辑区 */
+        .blog-edit-container .title {
+            margin-top: 20px;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .blog-edit-container .title #title {
+            width: 795px;
+            height: 50px;
+            border-radius: 10px;
+            padding-left: 20px;
+            border: none;
+            outline: none;
+            background-color: rgba(41, 83, 149, 0.3);
+            font-size: 15px;
+        }
+
+        .blog-edit-container .title #submit {
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: rgba(255, 192 , 153, 0.4);
+            font-size: 20px;
+        }
+
+        .blog-edit-container .title #submit:active {
+            background-color: rgba(41, 83, 149, 0.3);
+        }
+
+        #editor {
+            border-radius: 10px;
+            border: none;
+            opacity: 0.7;
+        }
+
+        .nav {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(50, 50, 50, 0.2);
+            color: #fff;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        .nav img {
+            width: 40px;
+            height: 40px;
+            margin-left: 30px;
+            margin-right: 10px;
+        }
+        .nav .title {
+            width: 120px;
+        }
+        .nav .spacer {
+            height: 40px;
+            width: calc(100% - 370px);
+        }
+        .nav a {
+            width: 60px;
+            margin: 20px;
+            text-decoration: none;
+            color: white;
+        }
+        .container {
+            height:calc(100% - 50px);
+            width:1000px;
+            margin:0 auto;
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+        }
+        .container .container-left{
+            height:100%;
+            width:200px;
+        }
+        .container .container-right {
+            height: 100%;
+            width: 795px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+        }
+        /* 用户信息卡片，也会在多个页面中用到 */
+.card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/* 用户头像 */
+.card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+/* 用户名 */
+.card h3 {
+    text-align: center;
+    padding: 10px 0;
+}
+.card h4 {
+    text-align:center;
+    color:gray;
+}
+
+/* 其它信息 */
+.card a {
+    /* a 标签是行内元素，设置尺寸、边距都可能失效，要转成块级元素 */
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: grey;
+    padding: 3px;
+}
+
+.card .counter {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    padding-top: 5px;
+}
+/* 这个 CSS 文件是用来放博客详情页的专属样式 */
+
+.blog-content {
+    padding: 30px;
+}
+
+/* 博客标题 */
+.blog-content h3 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+/* 博客日期 */
+.blog-content .date {
+    text-align: center;
+    padding-bottom: 10px;
+    color: grey;
+}
+
+/* 博客内容 */
+.blog-content p {
+    text-indent: 2em;
+    padding: 10px 0;
+}
+.blog-content hr {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+}
     </style>
     <body class="body">
+        <!--导航-->
+        <div class="nav">
+            <img src="heart.jpg" alt="">
+            <span class="title">OLD的博客</span>
+            <span class="spacer"></span>
+            <a href="index.html">主页</a>
+        </div>
         <div id="datetime" align="center">
             <script>
                 setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
             </script>
         </div>
+        <!--面版-->
+        <div class="container">
+            <div class="container-left">
+                <div class="card">
+                    <img src="image.jpg" alt="">
+                    <h3>OLD</h3>
+                    <h4>Welcome</h4>
+                </div>
+            </div>
+            <div class="container-right">
+                <div class="blog-content" align="center">
+                    <h3>1.博客论坛</h3>
+                    <h4>
+                        <a href="https://drunkmars.top/" target = "_blank" style="color:black">Dk Bolg</a>
+                        <a href="https://www.cnblogs.com/sakura521" target = "_blank" style="color:black">Ctrl Blog</a>
+                    </h4>
+                    <hr>
+                    <h3>2.其他</h3>
+                    <h4>
+                        <a href="https://api.xposed.info/reference/packages.html" target = "_blank" style="color:black">Xposed api</a>
+                        <a href="https://ollama.com/" target = "_blank" style="color:black">OllamaAI模型</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
         <div align="center">
             <h3 class="hitokoto" id="yiyancon"></h3> 
             <script type="text/javascript" src="https://international.v1.hitokoto.cn?encode=js&amp;charset=utf-8&amp;&amp;c=j&amp;c=k&amp;c=l"></script>
-        </div>
-        <div align="center">
-            <h4><b>博客</b></h4>
-            <h2>
-                <a href="https://drunkmars.top/" target = "_blank" style="color:black">Dk Bolg</a>
-                <a href="https://www.cnblogs.com/sakura521" target = "_blank" style="color:black">Ctrl Blog</a>
-            </h2>
-            <h4><b>其他</b></h4>
-            <h2>
-                <a href="https://api.xposed.info/reference/packages.html" target = "_blank" style="color:black">Xposed api</a>
-                <a href="https://ollama.com/" target = "_blank" style="color:black">OllamaAI模型</a>
-            </h2>
         </div>
     </body>
 </html>

@@ -131,7 +131,9 @@
 }
 .card h4 {
     text-align:center;
+    color:gray;
 }
+
 /* 其它信息 */
 .card a {
     /* a 标签是行内元素，设置尺寸、边距都可能失效，要转成块级元素 */
@@ -174,11 +176,15 @@
     text-indent: 2em;
     padding: 10px 0;
 }
+.blog-content hr {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+}
     </style>
     <body class="body">
         <!--导航-->
         <div class="nav">
-            <img src="image.jpg" alt="">
+            <img src="heart.jpg" alt="">
             <span class="title">OLD的博客</span>
             <span class="spacer"></span>
             <a href="index.html">主页</a>
@@ -194,13 +200,14 @@
                 <div class="card">
                     <img src="image.jpg" alt="">
                     <h3>OLD</h3>
-                    <h2>WELCOME</h2>
+                    <h4>Welcome</h4>
                 </div>
             </div>
             <div class="container-right">
-                <div class="blog-content">
+                <div class="blog-content" align="center">
                     <h3>1.申明</h3>
                     <h4>此网站为OLD个人博客网站，请尊重他人，勿乱传播</h4>
+                    <hr>
                     <h3>2.内容</h3>
                     <h4>
                         <a href="God.html" >God</a>
